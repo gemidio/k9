@@ -1,0 +1,23 @@
+repos:
+-   repo: local
+    hooks:
+    - id: code-formatter
+      name: Code Formatter
+      entry: poetry run black .
+      language: python
+      types: [file, python]
+-   repo: local
+    hooks:
+    - id: style-guide-enforcement
+      name: Style Guide Enforcement
+      entry: poetry run flake8
+      language: python
+      types: [file, python]
+-   repo: local
+    hooks:
+    - id: check-for-type-hints
+      name: Check for type hints
+      entry: poetry run mypy .
+      language: system
+      types: [python]
+      pass_filenames: false
