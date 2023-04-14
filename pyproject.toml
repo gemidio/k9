@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "k9"
+version = "0.1.0"
+description = "A simple AI to monitor suspicous accesses"
+authors = ["Gabriel Emídio Moreira"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Flask = "^2.2.3"
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^6.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
