@@ -3,14 +3,14 @@ repos:
     hooks:
     - id: code-formatter
       name: Code Formatter
-      entry: poetry run black .
+      entry: make format
       language: python
       types: [file, python]
 -   repo: local
     hooks:
-    - id: style-guide-enforcement
-      name: Style Guide Enforcement
-      entry: poetry run flake8
+    - id: static-analysis
+      name: Static Analysis
+      entry: make lint
       language: python
       types: [file, python]
 -   repo: local
